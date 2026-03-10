@@ -1,0 +1,65 @@
+# conf/config.yaml
+seed: 0
+
+# Path to a CityLearn-converted JSON (your adapter’s output)
+dataset_json: "jax_ec/data/datasets/citylearn_challenge_2020_climate_zone_1.json"
+
+# Exchange mechanism
+exchange_name: "midpoint"          # or "double_auction"
+exchange_kwargs: {}                # keep for future params
+allow_grid_charging: false
+has_pricing_agent: false
+
+# Weights
+weight_path: null
+manager_weight_path: null
+save_path: null
+save_manager_path: null
+
+# Training
+num_epochs: 5
+eval_steps: 96                     # ~4 days if hourly
+
+# agent_types:
+#   - "Building_1": "RBC"
+#   - "Building_2": "RBC"
+#   - "Building_3": "RBC"
+#   - "Building_4": "RBC"
+#   - "Building_5": "RBC"
+#   - "Building_6": "RBC"
+#   - "Building_7": "RBC"
+#   - "Building_8": "PPO"
+#   - "Building_9": "Q"
+
+q_agent:
+  num_bins: 11
+  epsilon: 0.10
+  alpha: 0.10
+  gamma: 0.95
+
+population:
+  kinds: ["RBC", "Q"]   # can be ["RBC","PPO"], ["Q","PPO"], etc.
+
+ppo:
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_eps: 0.2
+  vf_coef: 0.5
+  ent_coef: 0.01
+  lr: 0.0003
+  max_grad_norm: 0.5
+  update_epochs: 4
+  num_minibatches: 4
+  act_dim: 1
+  hidden: 64
+  activation: "tanh"
+  rollout_len: 64
+
+battery:
+  capacity: 10.0
+  nominal_power: 5.0
+  initial_soc: 0.5
+  round_trip_efficiency: 0.95
+  capacity_loss_coefficient: 1.0e-05
+  loss_coefficient: 1.0e-04
+  depth_of_discharge: 0.9

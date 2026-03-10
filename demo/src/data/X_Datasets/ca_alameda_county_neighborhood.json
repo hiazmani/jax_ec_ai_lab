@@ -1,0 +1,25 @@
+{
+    "metadata": {
+        "name": "citylearn_challenge_2020_climate_zone_1",
+        "description": "CityLearn Challenge 2020 Climate Zone 1 Dataset",
+        "number_of_agents": 0,
+        "time_resolution": "hourly",
+        "time_period": {
+            "start_date": "",
+            "end_date": ""
+        },
+        "pricing_data_included": false
+    },
+    "temporal": {
+        "timestamps": [],
+        "hour_of_day": [],
+        "day_of_week": [],
+        "month_of_year": [],
+        "year": []
+    },
+    "pricing": {
+        "feed_in_tariff": [],
+        "time_of_use_tariff": []
+    },
+    "households": []
+}

@@ -1,0 +1,11 @@
+enabled: true
+# Capacity
+capacity: 6.4
+capacity_loss_coefficient: 1e-05
+nominal_power: 5.0
+# Efficiency
+round_trip_efficiency: 0.9
+loss_coefficient: 0.
+# Stored Energy
+initial_soc: 0.
+depth_of_discharge: 0.8

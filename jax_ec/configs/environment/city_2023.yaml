@@ -1,0 +1,10 @@
+dataset:
+  name: citylearn_challenge_2023_phase_1.json
+
+global_fit_price:
+global_tou_price:
+
+battery_enabled:
+  Building_1: true
+  Building_2: false
+  Building_3: true

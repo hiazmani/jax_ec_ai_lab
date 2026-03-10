@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@reference "tailwindcss";
+
+:root {
+  --color-brown: #582f0e;
+  background-color: #fcfaf1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.App {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-bottom: 60px; /* Reserve space for slide indicator */
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.selector-container {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.selector-container select {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.graph-container {
+  margin-bottom: 50px;
+}
+
+svg {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: var('--colors-background');
+}
+
+.slide {
+  padding: 40px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Bottom border for the slide indicator area */
+.slide-indicator-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+button {
+  margin-top: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.nextSlideButton {
+  background-color: var(--color-brown);
+  color: white;
+  /*border: none;*/
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 5px solid var(--color-brown);
+  transition: background-color 0.3s ease;
+}
+
+.nextSlideButton:hover {
+  color: var(--color-brown);
+  border: 5px solid var(--color-brown);
+  border-radius: 5px;
+  background-color: var(--color-darkBrown2);
+}
+
+a {
+  text-decoration: underline;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+  /* Align the items to the left as the div is centered */
+  text-align: left;
+}
+
+.LineGraphContainer {
+  border: none;
+  box-shadow: none;
+}

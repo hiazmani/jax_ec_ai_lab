@@ -1,0 +1,12 @@
+{
+  "agents": [
+    {
+      "id": "house 3",
+      "profile": "home_office",
+      "solar": true,
+      "battery": true,
+      "decision_making": "ai"
+    }
+  ],
+  "exchange_mechanism": "none"
+}

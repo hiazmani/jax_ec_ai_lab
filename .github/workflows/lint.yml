@@ -1,0 +1,39 @@
+# .github/workflows/lint.yml
+name: Linting
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    # Setup Python
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements/requirements-dev.txt
+
+    # Run Python Linters
+    - name: Run Black
+      run: black --check .
+
+    # Setup Node.js for the demo
+    # - name: Set up Node.js
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: '18'
+
+    # Run JS Linters
+    # - name: Install JS dependencies and lint
+    #   run: |
+    #     cd demo
+    #     npm install
+    #     npm run lint
+    #     npm run format -- --check

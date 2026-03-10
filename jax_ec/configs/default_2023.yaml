@@ -1,0 +1,7 @@
+defaults:
+  - _self_
+  - environment: city_2023
+  - battery: default
+
+seed: 42
+num_steps: 168  # 1 week

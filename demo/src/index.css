@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fcfaf1;
+  /*--color-background: #f8f8f8;  !* White *!*/
+  /*--color-background: #000000;  !* Black *!*/
+
+  --color-primaryGreen: #6BAA75;
+  --color-primaryBlue: #4B9CD3;
+  /*--color-secondary: #;*/
+  --color-accent: #FFC947;
+  --color-darkGrey: #2F4858;
+  --color-darkBrown: #DAD7CD;
+  --color-darkBrown2: #F2E8CF;
+  --color-darkGreen: #132A13;
+  --color-brown: #582f0e;
+  /*--color-white: #;*/
+
+  --font-poppins: 'Poppins', sans-serif;
+  --font-futura: 'FuturaHandwritten', sans-serif;
+}
+
+/* Global Styles */
+body {
+  background-color: theme('colors.background');
+  color: theme('colors.brown');
+  font-family: theme('fontFamily.poppins');
+  /*font-family: theme('fontFamily.futura');*/
+  /*color: theme(colors.primary);*/
+  color: theme(colors.darkGreen);
+}
+
+.slide-title {
+  @apply text-3xl font-bold mb-4 text-center;
+  color: theme(colors.brown);
+}
+
+.slide-content {
+  @apply max-w-2xl mx-auto mb-6 text-center;
+}
+
+.slide-container {
+  @apply relative w-screen min-h-screen overflow-hidden flex flex-col items-center justify-center p-8 bg-white text-gray-800;
+}
+
+.slide-indicator {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicator-dot {
+  width: 12px;
+  height: 12px;
+  /*background-color: #a52a2a; !* brown color *!*/
+  background-color: theme('colors.darkBrown');
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.indicator-dot.active {
+  /*background-color: #fff;*/
+  background-color: theme(colors.accent);
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  /*background-color: #a52a2a; !* brown color *!*/
+  background-color: theme('colors.brown');
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.slide {
+  background-color: theme('colors.background');
+}

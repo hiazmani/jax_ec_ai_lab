@@ -1,0 +1,19 @@
+{"frames": {
+
+"house_color0000":
+{
+    "frame": {"x":0,"y":0,"w":128,"h":128},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+    "sourceSize": {"w":128,"h":128}
+}},
+"meta": {
+    "app": "Adobe Animate",
+    "version": "15.2.0.66",
+    "image": "house_color.png",
+    "format": "RGBA8888",
+    "size": {"w":128,"h":128},
+    "scale": "1"
+}
+}

@@ -1,0 +1,4 @@
+# Keep coordination drafts visible in local tree/search tooling.
+!md_drafts/
+references/*
+!references/README.md

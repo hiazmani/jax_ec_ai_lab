@@ -1,0 +1,5 @@
+dataset:
+  name: citylearn_challenge_2020_climate_zone_1.json
+
+global_fit_price: 0.05
+global_tou_price: 0.25

@@ -1,0 +1,55 @@
+{
+  "scenario": "citylearn_challenge_2021",
+  "num_agents": 9,
+  "num_timesteps": 35040,
+  "mechanism": "midpoint",
+  "metrics": {
+    "community_cost": 540157.875,
+    "per_agent_cost": [
+      110496.1640625,
+      61808.2578125,
+      -9550.97265625,
+      54883.17578125,
+      62493.65625,
+      65546.8125,
+      47344.45703125,
+      58857.2265625,
+      88274.7265625
+    ],
+    "community_gini": -0.3694503903388977,
+    "grid_import_kWh": 2176410.0,
+    "grid_export_kWh": 0.0,
+    "peak_grid_import": 91.09005737304688,
+    "self_sustainability_ratio": 0.6498411297798157,
+    "fairness_gini": -0.3694503903388977,
+    "emissions": 82703.578125,
+    "renewable_spill": 33110.8671875
+  },
+  "baseline": {
+    "community_cost": 615517.0625,
+    "per_agent_cost": [
+      118976.2109375,
+      62713.69140625,
+      4094.1962890625,
+      57089.6796875,
+      85760.1171875,
+      73835.7578125,
+      54030.39453125,
+      63780.21484375,
+      95229.2890625
+    ],
+    "community_gini": -0.34635889530181885,
+    "grid_import_kWh": 2205964.0,
+    "grid_export_kWh": -100049.9296875,
+    "peak_grid_import": 69.28628540039062,
+    "self_sustainability_ratio": 0.6287922263145447,
+    "fairness_gini": -0.34635889530181885,
+    "emissions": 80024.7421875,
+    "renewable_spill": 445119.4375
+  },
+  "delta": {
+    "community_cost": 75359.1875,
+    "grid_import_kWh": 29554.0,
+    "emissions_kg": -70495.6875
+  }
+}

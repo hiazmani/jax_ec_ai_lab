@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools >= 76.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jax_ec"
+description = "A JAX-powered framework for simulating and analyzing energy communities."
+readme = "README.md"
+requires-python = ">= 3.12"
+authors = [
+  {name="Hicham Azmani", email="hicham.azmani@vub.be"},
+  {name="Marjon Blondeel", email="marjon.blondeel@vub.be"}
+]
+license = { text="MIT License" }
+keywords = [ "Reinforcement Learning", "Multi-Agent", "RL", "Energy Management" ]
+classifiers = [
+    "Development Status :: 4 - Beta",  # change to `5 - Production/Stable` when ready
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    'Intended Audience :: Science/Research',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+]
+dynamic = ["version", "dependencies", "optional-dependencies"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["jax_ec", "jax_ec.*"]
+
+# ----------------------------- #
+# -- Linters and other tools -- #
+# ----------------------------- #
+[tool.black]
+line-length = 88
+target-version = ['py39', 'py310', 'py311']
+
+[tool.ruff]
+# Maximum line length
+line-length = 88
+
+lint.fixable = ["ALL"]
+lint.unfixable = []
+
+# Rules to enforce, for a full list see: https://docs.astral.sh/ruff/rules
+lint.select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "D",  # pydocstyle
+    "B",  # flake8-bugbear
+    "C41",  # flake8-comprehensions
+]
+
+lint.ignore = [
+  "D100", # Missing docstring in public module
+  "D104", # Missing docstring in public package
+  "D107", # Missing docstring in __init__
+]
+
+lint.pydocstyle.convention = "google"
+
+target-version = "py39"
+
+[tool.pytest.ini_options]
+filterwarnings = ['ignore:.*The environment .* is out of date.*']
+norecursedirs = [
+    "jax_ec",
+]
+# filterwarnings = ['ignore:.*step API.*:DeprecationWarning']

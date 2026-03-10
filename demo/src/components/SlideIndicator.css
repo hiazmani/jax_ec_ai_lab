@@ -1,0 +1,46 @@
+.slide-indicator-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.left-space {
+    flex: 1;
+}
+
+.slide-indicator {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indicator-dot {
+    margin: 0 5px;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ai-lab-logo {
+    height: 40px;
+    width: auto;
+}
